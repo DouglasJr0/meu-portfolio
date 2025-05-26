@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Douglas Jr | Desenvolvedor Full Stack</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <nav class="topbar">
+        <div class="container">
+            <div class="logo">VG</div>
+            <ul class="nav-links">
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#portfolio">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container hero-flex">
+            <div class="hero-text">
+                <h1>desenvolvedor</h1>
+                <p>Especialista em desenvolvimento web com foco em experiência, interatividade e visual moderno.</p>
+            </div>
+            <div class="hero-image">
+                <img src="img/sua-foto-ilustrada.png" alt="Victor Gonçalves">
+            </div>
+        </div>
+    </header>
+
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2>Meus Projetos Recentes</h2>
+            <div class="projetos-container">
+                <div class="projeto-card">Projeto 1</div>
+                <div class="projeto-card">Projeto 2</div>
+                <div class="projeto-card">Projeto 3</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="contato">
+        <div class="container">
+            <h2>Entre em Contato</h2>
+            <form id="form-contato">
+                <input type="text" name="nome" placeholder="Seu nome" required>
+                <input type="email" name="email" placeholder="Seu email" required>
+                <textarea name="mensagem" placeholder="Sua mensagem" required></textarea>
+                <button type="submit">Enviar Mensagem</button>
+                <div id="resposta-contato"></div>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Douglas Jr. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
