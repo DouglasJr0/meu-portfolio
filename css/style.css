@@ -3,7 +3,7 @@
     --verde-hover: #22c55e;
     --cinza-claro: #f1f5f9;
     --branco: #ffffff;
-    --preto: #111827;
+    --preto: #ffffff;
 }
 
 * {
@@ -27,9 +27,8 @@ body {
 
 /* Topbar */
 .topbar {
-    background-color: var(--branco);
-    border-bottom: 1px solid var(--cinza-claro);
-    padding: 20px 0;
+    background-color: #2a4e37;
+    height: 70px;
 }
 
 .topbar .container {
@@ -38,16 +37,19 @@ body {
     align-items: center;
 }
 
-.logo {
-    font-size: 1.8rem;
-    font-weight: 800;
-    color: var(--verde-claro);
+.logo img {
+    height: 180px;
+    width: auto;
+    object-fit: contain;
+    transform: translateY(-50px);
 }
 
 .nav-links {
     display: flex;
     gap: 25px;
     list-style: none;
+    transform: translateY(-60px);
+    margin-left: 445px;
 }
 
 .nav-links a {
@@ -58,7 +60,11 @@ body {
 }
 
 .nav-links a:hover {
-    color: var(--verde-hover);
+    color: var(--verde-claro);
+}
+
+.social-icons {
+    transform: translateY(-60px);
 }
 
 .social-icons a {
@@ -74,7 +80,7 @@ body {
 
 /* Hero */
 .hero {
-    background-color: var(--cinza-claro);
+    background: linear-gradient(135deg, #1b5330, #2a9b62);
     padding: 60px 0;
 }
 
@@ -87,10 +93,28 @@ body {
 
 .hero-text {
     max-width: 550px;
+    padding-top: 20px;
+    /* adiciona espaçamento superior */
 }
 
 .hero-text h1 {
     font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+.hero-text .intro {
+    font-size: 1.2rem;
+    color: #2a4e37;
+    font-weight: 400;
+}
+
+.hero-text .dev {
+    color: #2a4e37;
+}
+
+.hero-text .web {
     color: var(--verde-claro);
 }
 
@@ -99,16 +123,99 @@ body {
     font-size: 1.2rem;
 }
 
-.hero-image img {
-    width: 260px;
-    border-radius: 50%;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+.hero-buttons {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
 }
+
+.hero-buttons a {
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-contrate {
+    background-color: #ffffff;
+    color: black;
+    border: #22c55e;
+}
+
+.btn-contrate:hover {
+    background-color: var(--verde-hover);
+    border-color: var(--verde-hover);
+}
+
+/* Imagem Redonda */
+.hero-image-rounded {
+    position: relative;
+    width: 320px;
+    height: 320px;
+    margin: auto;
+}
+
+.hero-image-rounded::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0.05));
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    z-index: 0;
+}
+
+.hero-image-rounded::after {
+    content: '';
+    position: absolute;
+    top: 65%;
+    /* desce a forma */
+    left: 65%;
+    width: 100%;
+    /* deixa mais estreita */
+    height: 145%;
+    background: rgba(0, 0, 0, 0.05);
+    transform: translate(-50%, -50%) rotate(135deg);
+    border-radius: 100% / 95%;
+    z-index: 0;
+}
+
+
+
+
+.circle-frame {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #0f5132, #198754);
+    border-radius: 50%;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.circle-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.25);
+}
+
 
 /* Portfolio */
 .portfolio {
     padding: 60px 0;
     text-align: center;
+    background-color: #f0f8f3;
 }
 
 .portfolio h2 {
@@ -125,7 +232,7 @@ body {
 }
 
 .projeto-card {
-    background: var(--branco);
+    background: #22c55e;
     border: 1px solid var(--cinza-claro);
     width: 280px;
     padding: 20px;
@@ -209,11 +316,19 @@ form button:hover {
         margin-bottom: 30px;
     }
 
-    .hero-image img {
+    .circle-frame {
+        width: 240px;
+        height: 240px;
+    }
+
+    .circle-frame img {
         width: 200px;
+        height: 200px;
     }
 
     .nav-links {
         gap: 15px;
+        margin-left: 0;
+        transform: translateY(0);
     }
 }

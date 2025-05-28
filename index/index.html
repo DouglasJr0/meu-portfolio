@@ -2,14 +2,14 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Douglas Jr | Desenvolvedor Full Stack</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/style.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/script.js" defer></script>
 </head>
@@ -17,16 +17,21 @@
 <body>
     <nav class="topbar">
         <div class="container">
-            <div class="logo">VG</div>
+            <div class="logo">
+                <img src="../img/Logo.DouglasJr.png" alt="Logo Douglas Jr" />
+            </div>
             <ul class="nav-links">
+                <li><a href="#Home">Home</a></li>
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#portfolio">Projetos</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
             <div class="social-icons">
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/douglas-junior-8b083022a/" target="_blank"><i
+                        class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/DouglasJr0" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/douglas_junior6/" target="_blank"><i
+                        class="fab fa-instagram"></i></a>
             </div>
         </div>
     </nav>
@@ -34,11 +39,18 @@
     <header class="hero">
         <div class="container hero-flex">
             <div class="hero-text">
-                <h1>desenvolvedor</h1>
-                <p>Especialista em desenvolvimento web com foco em experiência, interatividade e visual moderno.</p>
+                <h1><span class="intro">Olá, eu sou um</span><br><span class="dev">Desenvolvedor</span> <span
+                        class="web">Web</span></h1>
+                <p style="color: #dfe2e0;">Especialista em desenvolvimento web com foco em experiência, interatividade e
+                    visual moderno.</p>
+                <div class="hero-buttons">
+                    <a href="https://wa.me/41999657531" class="btn-contrate">Fale Comigo</a>
+                </div>
             </div>
-            <div class="hero-image">
-                <img src="img/sua-foto-ilustrada.png" alt="Victor Gonçalves">
+            <div class="hero-image-rounded">
+                <div class="circle-frame">
+                    <img src="../img/Foto.png" alt="Douglas Jr" />
+                </div>
             </div>
         </div>
     </header>
@@ -58,8 +70,8 @@
         <div class="container">
             <h2>Entre em Contato</h2>
             <form id="form-contato">
-                <input type="text" name="nome" placeholder="Seu nome" required>
-                <input type="email" name="email" placeholder="Seu email" required>
+                <input type="text" name="nome" placeholder="Seu nome" required />
+                <input type="email" name="email" placeholder="Seu email" required />
                 <textarea name="mensagem" placeholder="Sua mensagem" required></textarea>
                 <button type="submit">Enviar Mensagem</button>
                 <div id="resposta-contato"></div>
