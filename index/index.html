@@ -39,21 +39,63 @@
     <header class="hero">
         <div class="container hero-flex">
             <div class="hero-text">
-                <h1><span class="intro">Olá, eu sou um</span><br><span class="dev">Desenvolvedor</span> <span
-                        class="web">Web</span></h1>
-                <p style="color: #dfe2e0;">Especialista em desenvolvimento web com foco em experiência, interatividade e
-                    visual moderno.</p>
+                <span class="intro">Olá, eu sou um</span>
+                <h1>
+                    <span class="dev">Desenvolvedor </span><span class="web">Web</span>
+                </h1>
+                <p>Em construção como desenvolvedor full stack, com paixão por código limpo e interfaces intuitivas.</p>
                 <div class="hero-buttons">
-                    <a href="https://wa.me/41999657531" class="btn-contrate">Fale Comigo</a>
+                    <a href="https://wa.me/41999657531" class="btn-contrate">
+                        <i class="fa-brands fa-whatsapp" style="margin-right: 4px;"></i> Fale Comigo
+                    </a>
                 </div>
             </div>
-            <div class="hero-image-rounded">
-                <div class="circle-frame">
-                    <img src="../img/Foto.png" alt="Douglas Jr" />
-                </div>
+
+            <div class="hero-image-wrapper">
+                <img src="../img/Foto.png" alt="Douglas Jr" class="hero-photo">
             </div>
         </div>
     </header>
+
+    <div class="divisor-customizado">
+        <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+            <path d="M0,0 C480,100 960,0 1440,100 L1440,00 L0,0 Z" fill="#0f5132"></path>
+        </svg>
+    </div>
+
+    <section id="sobre" class="sobre-modern pinto" style="display: flex;">
+        <div class="container sobre-grid">
+            <div class="sobre-img">
+                <img src="../img/sobre.png" alt="Servidor ou trabalho de TI" />
+            </div>
+
+            <div class="sobre-conteudo">
+                <h2><span>Douglas Jr</span> - Desenvolvedor em Formação</h2>
+                <p>
+                    Cursando Engenharia de Software pela Universidade Positivo e atuando como estagiário full stack, sou
+                    apaixonado por interfaces intuitivas, código limpo e soluções modernas.
+                </p>
+
+                <ul class="sobre-lista">
+                    <li><i class="fa-solid fa-server"></i> Infraestrutura e DevOps</li>
+                    <li><i class="fa-solid fa-code"></i> Desenvolvimento Web (Laravel, PHP, JS)</li>
+                    <li><i class="fa-solid fa-database"></i> Banco de Dados (MySQL, PostgreSQL)</li>
+                </ul>
+
+                <div class="sobre-botoes">
+                    <a href="#contato" class="btn-contrate"><i class="fa-solid fa-envelope"></i> Contato</a>
+                    <a href="#tecnologias" class="btn-contrate"><i class="fa-solid fa-gears"></i> Tecnologias</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Divisor -->
+    <div class="divisor-svg">
+        <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+            <path d="M0,0 C480,100 960,0 1440,100 L1440,0 L0,0 Z" fill="#0f5132"></path>
+        </svg>
+    </div>
 
     <section id="portfolio" class="portfolio">
         <div class="container">
@@ -65,6 +107,13 @@
             </div>
         </div>
     </section>
+
+    <!-- Divisor -->
+    <div class="divisor-svg">
+        <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+            <path d="M0,100 C480,0 960,100 1440,0 L1440,100 L0,100 Z" fill="#f9fafb"></path>
+        </svg>
+    </div>
 
     <section id="contato" class="contato">
         <div class="container">
@@ -84,6 +133,7 @@
             <p>&copy; 2025 Douglas Jr. Todos os direitos reservados.</p>
         </div>
     </footer>
+
 </body>
 
 </html>
