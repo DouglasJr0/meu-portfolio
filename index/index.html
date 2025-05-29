@@ -10,8 +10,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/script.js" defer></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+
+
+
 </head>
 
 <body>
@@ -23,6 +29,7 @@
             <ul class="nav-links">
                 <li><a href="#Home">Início</a></li>
                 <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#Serviços">Serviços</a></li>
                 <li><a href="#portfolio">Projetos</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
@@ -39,63 +46,102 @@
     <header class="hero">
         <div class="container hero-flex">
             <div class="hero-text">
-                <!-- <span class="intro">Olá, eu sou um</span> -->
                 <h1>
-                    <span class="dev">Transformando </span><br />
-                    <span class="dev">Tecnologia em Soluções</span>
+                    <span class="dev">Transforme sua </span><br />
+                    <span class="dev">Ideia em Realidade</span>
                 </h1>
-                <p>Desenvolvedor full stack oferecendo consultoria especializada em infraestrutura, sistemas e desenvolvimento.</p>
+                <p>Desenvolvedor full stack pronto pra transformar suas ideias em realidade.</p>
                 <div class="hero-buttons">
                     <a href="https://wa.me/41999657531" class="btn-contrate">
                         <i class="fa-brands fa-whatsapp" style="margin-right: 4px;"></i> Fale Comigo
-                    <a href="https://wa.me/41999657531" class="btn-contrate">
-                            <i style="margin-right: 4px;"></i> Meus Serviços
+                    </a>
+                    <a href="#tecnologias" class="btn-contrate btn-outline">
+                        <i class="fa-solid fa-gears"></i> Meus Serviços
                     </a>
                 </div>
             </div>
 
-            <div class="hero-image-wrapper">
-                <img src="../img/Foto.png" alt="Douglas Jr" class="hero-photo">
+            <!-- ANIMAÇÃO NOVA FUNCIONAL -->
+            <!-- ENVOLTO COM UM BACKGROUND CUSTOMIZADO -->
+            <div class="hero-animation-wrapper">
+                <div class="hero-animation">
+                    <dotlottie-player src="https://lottie.host/0f296176-1c5b-4308-a655-bcbedbf4fc74/UIHTveB0jy.lottie"
+                        background="transparent" speed="1" loop autoplay style="width: 100%; height: 100%;">
+                    </dotlottie-player>
+                </div>
             </div>
-        </div>
     </header>
 
-    <div class="divisor-customizado">
-        <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
-            <path d="M0,0 C480,100 960,0 1440,100 L1440,00 L0,0 Z" fill="#0f5132"></path>
-        </svg>
-    </div>
+
+    <!-- <div class="divisor-marquee">
+        <div class="marquee">
+            <div class="marquee-content">
+                HTML • CSS • JAVASCRIPT • PHP • LARAVEL • MYSQL • POSTGRESQL • DOCKER • GIT • API REST • REACT •
+                TAILWIND • NODE.JS • JQUERY • GITHUB • AJAX • WSL 
+            </div>
+        </div>
+    </div> -->
+
 
     <section id="sobre" class="sobre-modern">
         <div class="container sobre-grid">
-    
-          <!-- IMAGEM À ESQUERDA -->
-          <div class="sobre-img">
-            <img src="../img/Foto.png" alt="Douglas Jr - Foto Profissional" class="sobre-foto" />
-          </div>
-    
-          <!-- TEXTO À DIREITA -->
-          <div class="sobre-conteudo">
-            <h2><span class="destaque">Douglas da Silva Mattos Jr. </span> -<br>Desenvolvedor Web</h2>
-            <p>
-              Cursando Engenharia de Software pela Universidade Positivo e atuando como estagiário full stack,
-              ofereço soluções em diversas áreas da tecnologia, com foco em desenvolvimento web, infraestrutura e bancos de dados.
-            </p>
-    
-            <ul class="sobre-lista">
-              <li><i class="fa-solid fa-server"></i> Infraestrutura de TI</li>
-              <li><i class="fa-solid fa-code"></i> Desenvolvimento Web (Laravel, PHP, JS)</li>
-              <li><i class="fa-solid fa-database"></i> Banco de Dados (MySQL, PostgreSQL)</li>
-            </ul>
-    
-            <div class="sobre-botoes">
-              <a href="#contato" class="btn-contrate"><i class="fa-solid fa-envelope"></i> Contato</a>
-              <a href="#tecnologias" class="btn-contrate btn-outline"><i class="fa-solid fa-gears"></i> Tecnologias</a>
+
+            <!-- IMAGEM À ESQUERDA -->
+            <div class="sobre-img-wrapper">
+                <img src="../img/Foto.png" alt="Douglas Jr - Foto Profissional" class="sobre-foto" />
             </div>
-          </div>
-    
+
+            <!-- TEXTO À DIREITA -->
+            <div class="sobre-conteudo">
+                <h2><span class="destaque">Douglas da Silva Mattos Jr. </span> -<br>Desenvolvedor Web</h2>
+                <p>
+                    Cursando Engenharia de Software pela Universidade Positivo e atuando como estagiário full stack,
+                    ofereço soluções em diversas áreas da tecnologia, com foco em desenvolvimento web, infraestrutura e
+                    bancos de dados.
+                </p>
+
+                <ul class="sobre-lista">
+                    <li><i class="fa-solid fa-server"></i> Infraestrutura de TI</li>
+                    <li><i class="fa-solid fa-code"></i> Desenvolvimento Web (Laravel, PHP, JS)</li>
+                    <li><i class="fa-solid fa-database"></i> Banco de Dados (MySQL, PostgreSQL)</li>
+                </ul>
+
+                <div class="sobre-botoes">
+                    <a href="#contato" class="btn-contrate"><i class="fa-solid fa-envelope"></i> Contato</a>
+                </div>
+            </div>
+
         </div>
-      </section>
-    </body>
-    
-    </html>
+    </section>
+
+
+    <section id="servicos" class="servicos-section">
+        <div class="container">
+            <h2 class="section-title">Serviços</h2>
+            <div class="servicos-grid">
+                <div class="servico-card">
+                    <i class="fas fa-code"></i>
+                    <h3>Desenvolvimento Web</h3>
+                    <p>Criação de sites modernos, responsivos e otimizados para performance e SEO.</p>
+                </div>
+                <div class="servico-card">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Responsividade</h3>
+                    <p>Layouts adaptáveis para dispositivos móveis, tablets e telas grandes.</p>
+                </div>
+                <div class="servico-card">
+                    <i class="fas fa-paint-brush"></i>
+                    <h3>Design UI/UX</h3>
+                    <p>Interfaces intuitivas, agradáveis e centradas na experiência do usuário.</p>
+                </div>
+                <div class="servico-card">
+                    <i class="fas fa-server"></i>
+                    <h3>Back-end Laravel</h3>
+                    <p>APIs robustas com autenticação, banco de dados e segurança com PHP e Laravel.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
