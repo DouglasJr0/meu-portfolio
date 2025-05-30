@@ -314,7 +314,10 @@ body {
     justify-content: center;
     align-items: flex-start;
     text-align: left;
-    transform: translateX(250px) !important;
+    transform: translateX(115px) !important;
+    gap: 20px;
+    flex-wrap: wrap;
+    /* ou nowrap se quiser forçar linha única */
 }
 
 .sobre-conteudo h2 {
@@ -325,15 +328,23 @@ body {
 }
 
 .sobre-conteudo .destaque {
-    color: #4ade80;
+    color: #5aff73;
 }
 
 .sobre-conteudo p {
-    font-size: 1.05rem;
+    white-space: normal;
+    /* Permite a quebra automática de linha */
+    overflow: visible;
+    /* Remove rolagem horizontal */
+    text-overflow: initial;
+    /* Desativa truncamento com "..." */
+    display: block;
+    font-size: 1.1rem;
     color: #e5e5e5;
-    margin-bottom: 20px;
     line-height: 1.6;
+    width: 750px;
 }
+
 
 .sobre-lista {
     list-style: none;
@@ -349,12 +360,12 @@ body {
     gap: 10px;
 }
 
-.sobre-lista i {
+/* .sobre-lista i {
     background-color: #3b82f6;
     color: white;
     padding: 10px;
     border-radius: 50%;
-}
+} */
 
 .sobre-botoes {
     display: flex;
@@ -367,18 +378,21 @@ body {
     position: relative;
     width: 100%;
     max-width: 410px;
-    border-radius: 45px;
-    /* mantém o estilo retangular com cantos arredondados */
+    border-radius: 65px;
     background: radial-gradient(circle at center, #198754 0%, #0f5132 50%);
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: -20px !important;
     overflow: hidden;
     z-index: 1;
     transition: transform 0.3s ease;
-    transform: translateX(-125px) !important
+
+    transform: translateX(-115px) translateY(75px);
+    /* <- desce 30px */
+    /* OU, se preferir margem: */
+    /* margin-top: 30px; */
 }
+
 
 .sobre-img-wrapper:hover {
     transform: scale(1.03);
@@ -432,7 +446,7 @@ body {
     z-index: 1;
     transition: transform 0.3s ease;
     margin-left: -40px;
-    transform: translateX(250px) !important;
+    transform: translateX(185px) !important;
 }
 
 
@@ -526,7 +540,7 @@ body {
 
 .servico-card i {
     font-size: 2.5rem;
-    color: #4ade80;
+    color: #5aff73;
     margin-bottom: 15px;
     transition: transform 0.3s ease;
 }
@@ -543,14 +557,19 @@ body {
 
 /* Tecnologias que domino */
 .section-subtitle {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: var(--branco);
+    font-size: 1.2rem;
+    /* menor */
+    font-weight: 400;
+    /* mais fina */
+    color: #48ff63;
     text-align: center;
-    margin: 40px 0 20px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    margin: 30px 0 10px;
+    text-transform: none;
+    /* opcional: remove o UPPERCASE */
+    letter-spacing: 0.5px;
+    /* menor espaçamento */
 }
+
 
 .grid-tecnologias {
     display: grid;
@@ -589,4 +608,18 @@ body {
 .tech-card:hover {
     transform: scale(1.05);
     box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+}
+
+.wrapper-tecnologias {
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    padding: 30px 40px;
+    border-radius: 20px;
+    margin-top: 50px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    max-width: 1100px;
+    /* ⬅ LIMITA o tamanho do retângulo */
+    margin-left: auto;
+    /* ⬅ mantém ele centralizado horizontalmente */
+    margin-right: auto;
 }
