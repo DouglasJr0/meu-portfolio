@@ -207,7 +207,7 @@ body {
     position: relative;
     width: 380px;
     height: 380px;
-    border-radius: 50%;
+    border-radius: 8px;
     background: radial-gradient(circle at center, #198754 0%, #0f5132 100%);
     display: flex;
     justify-content: center;
@@ -256,13 +256,14 @@ body {
 }
 
 .hero-photo {
-    width: 125%;
-    height: auto;
-    object-fit: cover;
-    transform: translateY(0%) translateX(-1%);
+    width: 105%;
+    height: 106%;
+    object-fit: contain;
+    border-radius: 8px;
     position: relative;
     z-index: 2;
 }
+
 
 .sobre-modern {
     background-color: #5b886c;
@@ -272,9 +273,9 @@ body {
 
 .sobre-grid {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
     gap: 40px;
 }
 
@@ -305,8 +306,7 @@ body {
     /* transform: scale(1.05); */
 /* aumenta em 5% */
 
-
-*/ .sobre-conteudo {
+.sobre-conteudo {
     flex: 1;
     max-width: 550px;
     display: flex;
@@ -314,6 +314,7 @@ body {
     justify-content: center;
     align-items: flex-start;
     text-align: left;
+    transform: translateX(250px) !important;
 }
 
 .sobre-conteudo h2 {
@@ -376,6 +377,7 @@ body {
     overflow: hidden;
     z-index: 1;
     transition: transform 0.3s ease;
+    transform: translateX(-125px) !important
 }
 
 .sobre-img-wrapper:hover {
@@ -417,9 +419,10 @@ body {
 
 .hero-animation-wrapper {
     position: relative;
-    width: 400px;
-    height: 400px;
-    border-radius: 50%;
+    width: 535px;
+    height: 360px;
+    border-radius: 8px;
+    /* atualizado */
     background: radial-gradient(circle at center, #198754 0%, #0f5132 100%);
     display: flex;
     justify-content: center;
@@ -428,7 +431,10 @@ body {
     overflow: hidden;
     z-index: 1;
     transition: transform 0.3s ease;
+    margin-left: -40px;
+    transform: translateX(250px) !important;
 }
+
 
 .hero-animation-wrapper:hover {
     transform: scale(1.03);
@@ -437,14 +443,16 @@ body {
 .hero-animation-wrapper::before {
     content: '';
     position: absolute;
-    inset: -30px;
-    border-radius: 50%;
+    inset: 0;
+    border-radius: 8px;
+    /* atualizado */
     background: radial-gradient(circle, rgba(36, 187, 98, 0.2), rgba(36, 187, 98, 0.05));
     box-shadow:
         0 0 0 15px rgba(36, 187, 98, 0.15),
         0 0 30px rgba(0, 0, 0, 0.2);
     z-index: 0;
 }
+
 
 .hero-animation-wrapper::after {
     content: '';
@@ -465,7 +473,10 @@ body {
     pointer-events: none;
     z-index: 0;
     mix-blend-mode: soft-light;
+    border-radius: 0;
+    /* garante que também seja quadrado */
 }
+
 
 .hero-animation {
     width: 100%;
@@ -528,4 +539,54 @@ body {
 .servico-card p {
     font-size: 1rem;
     color: #e0e0e0;
+}
+
+/* Tecnologias que domino */
+.section-subtitle {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--branco);
+    text-align: center;
+    margin: 40px 0 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.grid-tecnologias {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 40px;
+    padding: 0 10px;
+}
+
+.tech-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tech-card i {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: var(--verde-claro);
+}
+
+.tech-card span {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--branco);
+}
+
+.tech-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
 }
