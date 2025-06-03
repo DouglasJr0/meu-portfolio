@@ -928,22 +928,18 @@ body {
 }
 
 .contato-form label {
-    font-size: 0.9rem;
-    margin-top: 15px;
+    font-weight: bold;
     display: block;
-    color: #d0e4d4;
+    margin-top: 10px;
 }
 
 .contato-form input,
 .contato-form textarea {
     width: 100%;
-    padding: 10px 14px;
+    padding: 10px;
     margin-top: 5px;
-    border: none;
-    border-radius: 8px;
-    background-color: #2a3933;
-    color: white;
-    font-size: 0.95rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
 
 .contato-form input:focus,
@@ -967,7 +963,6 @@ body {
     align-items: center;
     justify-content: center;
     gap: 8px;
-    transition: background-color 0.3s ease;
 }
 
 .contato-form button:hover {

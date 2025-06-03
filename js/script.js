@@ -20,4 +20,25 @@ window.addEventListener('load', () => {
             icon.style.transform = 'translate(0, 0)';
         });
     });
+    document.querySelector('.contato-form').addEventListener('submit', function (e) {
+        e.preventDefault();
+        const form = e.target;
+        const data = new FormData(form);
+
+        fetch(form.action, {
+            method: 'POST',
+            body: data
+        })
+            .then(res => res.text())
+            .then(response => {
+                if (response.trim() === "OK") {
+                    alert("Mensagem enviada com sucesso!");
+                    form.reset();
+                    window.open('https://wa.me/5541999657531?text=Recebi+sua+mensagem+do+site!', '_blank');
+                } else {
+                    alert("Erro: " + response);
+                }
+            })
+            .catch(() => alert("Erro ao enviar a mensagem."));
+    });
 });
