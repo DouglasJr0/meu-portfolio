@@ -316,7 +316,7 @@ body {
     justify-content: center;
     align-items: flex-start;
     text-align: left;
-    transform: translateX(115px) !important;
+    transform: translateX(110px) !important;
     gap: 20px;
     flex-wrap: wrap;
     /* ou nowrap se quiser forçar linha única */
@@ -388,7 +388,7 @@ body {
     overflow: hidden;
     z-index: 1;
     transition: transform 0.3s ease;
-    transform: translateX(-115px) translateY(75px);
+    transform: translateX(-130px) translateY(75px);
 }
 
 .sobre-img-wrapper:hover {
@@ -513,9 +513,14 @@ body {
 
 .section-title {
     font-size: 2.5rem;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     color: #4ade80;
+    position: relative;
+    /* Necessário para ::after */
+    display: inline-block;
+    text-align: center;
 }
+
 
 .servicos-grid {
     display: grid;
@@ -524,33 +529,62 @@ body {
 }
 
 .servico-card {
-    background-color: #3f5d4b;
+    background: linear-gradient(145deg, #3f5d4b, #2a4e37);
+    border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 20px;
     padding: 30px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
 }
 
 .servico-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 8px 24px rgba(36, 187, 98, 0.2);
 }
 
 .servico-card i {
     font-size: 2.5rem;
-    color: #5aff73;
+    color: #4ade80;
     margin-bottom: 15px;
     transition: transform 0.3s ease;
 }
 
-.servico-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+.servico-card:hover i {
+    transform: scale(1.2);
 }
 
-.servico-card p {
-    font-size: 1rem;
-    color: #e0e0e0;
+.servico-card::before {
+    content: '';
+    position: absolute;
+    top: -30%;
+    left: -30%;
+    width: 160%;
+    height: 160%;
+    background: radial-gradient(circle, rgba(74, 222, 128, 0.05), transparent 70%);
+    z-index: 0;
+    pointer-events: none;
 }
+
+.servico-card h3,
+.servico-card p {
+    position: relative;
+    z-index: 1;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 40px;
+    width: 95px;
+    height: 3px;
+    background: linear-gradient(to right, #4ade80, #22c55e);
+    border-radius: 3px;
+}
+
+
 
 /* Tecnologias que domino */
 .section-subtitle {
@@ -588,16 +622,19 @@ body {
     justify-content: center;
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
+    animation: floatIn 0.6s ease forwards;
+    opacity: 0;
 }
+
+
 
 .tech-card i {
     font-size: 2rem;
     margin-bottom: 10px;
     color: var(--verde-claro);
-    transition: transform 0.2s ease;
-    /* já existente e suficiente */
+    transition: transform 0.3s ease;
+    /* <--- SUAVIZA O MOVIMENTO */
     will-change: transform;
-    /* recomendado para performance */
 }
 
 
@@ -631,4 +668,28 @@ body {
     object-fit: contain;
     transition: transform 0.4s ease;
     will-change: transform;
+}
+
+
+
+@keyframes floatIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px) scale(0.95);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.section-subtitle-legenda {
+    font-size: 1rem;
+    color: #d1f5e0;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    letter-spacing: 0.3px;
+    font-weight: 300;
+    text-align: center;
 }
