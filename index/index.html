@@ -15,6 +15,8 @@
     <script src="../js/script.js" defer></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
 
 
 
@@ -133,42 +135,225 @@
 
     <section id="servicos" class="servicos-section sr-section">
         <div class="container">
-            <h2 class="section-title">Serviços</h2>
-            <p class="section-subtitle-legenda">O que podemos fazer por você</p>
+            <h2 class="section-title">Serviços que ofereço</h2>
+            <p class="section-subtitle-legenda">Soluções personalizadas para atender todas as necessidades tecnológicas
+                da sua empresa.</p>
             <div class="servicos-grid">
+
+                <!-- Flip Card 1 -->
                 <div class="servico-card">
-                    <i class="fas fa-code"></i>
-                    <h3>Desenvolvimento Web</h3>
-                    <p>Sites modernos, responsivos e otimizados para SEO.</p>
+                    <div class="card-inner">
+                        <div class="servico-front">
+                            <i class="fas fa-code"></i>
+                            <h3>Desenvolvimento Web</h3>
+                            <p>Sites modernos, responsivos e otimizados para SEO.</p>
+                        </div>
+                        <div class="servico-back">
+                            <h4>Tecnologias</h4>
+                            <ul>
+                                <li><i class="fab fa-html5"></i> HTML5</li>
+                                <li><i class="fab fa-css3-alt"></i> CSS3</li>
+                                <li><i class="fab fa-js"></i> JavaScript</li>
+                                <li><i class="fab fa-bootstrap"></i> Bootstrap</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
+
+                <!-- Flip Card 2 -->
                 <div class="servico-card">
-                    <i class="fas fa-mobile-alt"></i>
-                    <h3>Responsividade</h3>
-                    <p>Design adaptado para qualquer dispositivo.</p>
+                    <div class="card-inner">
+                        <div class="servico-front">
+                            <i class="fas fa-mobile-alt"></i>
+                            <h3>Responsividade</h3>
+                            <p>Design adaptado para qualquer dispositivo.</p>
+                        </div>
+                        <div class="servico-back">
+                            <h4>Tecnologias</h4>
+                            <ul>
+                                <li><i class="fab fa-bootstrap"></i> Bootstrap</li>
+                                <li><i class="fab fa-css3-alt"></i> CSS Media Queries</li>
+                                <li><i class="fab fa-html5"></i> HTML5</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
+
+                <!-- Flip Card 3 -->
                 <div class="servico-card">
-                    <i class="fas fa-paint-brush"></i>
-                    <h3>Design UI/UX</h3>
-                    <p>Experiência visual e intuitiva para seus usuários.</p>
+                    <div class="card-inner">
+                        <div class="servico-front">
+                            <i class="fas fa-paint-brush"></i>
+                            <h3>Design UI/UX</h3>
+                            <p>Experiência visual e intuitiva para seus usuários.</p>
+                        </div>
+                        <div class="servico-back">
+                            <h4>Tecnologias</h4>
+                            <ul>
+                                <li><i class="fab fa-figma"></i> Figma</li>
+                                <li><i class="fab fa-css3-alt"></i> CSS3</li>
+                                <li><i class="fab fa-js"></i> JavaScript</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
+
+                <!-- Flip Card 4 -->
                 <div class="servico-card">
-                    <i class="fas fa-server"></i>
-                    <h3>Back-end Laravel</h3>
-                    <p>APIs seguras com autenticação, banco de dados e performance.</p>
+                    <div class="card-inner">
+                        <div class="servico-front">
+                            <i class="fas fa-server"></i>
+                            <h3>Back-end Laravel</h3>
+                            <p>APIs seguras com autenticação, banco de dados e performance.</p>
+                        </div>
+                        <div class="servico-back">
+                            <h4>Tecnologias</h4>
+                            <ul>
+                                <li><i class="fab fa-php"></i> PHP</li>
+                                <li><i class="fab fa-laravel"></i> Laravel</li>
+                                <li><i class="fas fa-database"></i> MySQL/PostgreSQL</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
+
+                <!-- Flip Card 5 -->
                 <div class="servico-card">
-                    <i class="fas fa-database"></i>
-                    <h3>Banco de Dados</h3>
-                    <p>Modelagem, consultas otimizadas e integrações com PostgreSQL e MySQL.</p>
+                    <div class="card-inner">
+                        <div class="servico-front">
+                            <i class="fas fa-database"></i>
+                            <h3>Banco de Dados</h3>
+                            <p>Modelagem, consultas otimizadas e integrações.</p>
+                        </div>
+                        <div class="servico-back">
+                            <h4>Tecnologias</h4>
+                            <ul>
+                                <li><i class="fas fa-database"></i> PostgreSQL</li>
+                                <li><i class="fas fa-database"></i> MySQL</li>
+                                <li><i class="fab fa-laravel"></i> Laravel Eloquent</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
+
+                <!-- Flip Card 6 -->
                 <div class="servico-card">
-                    <i class="fas fa-bug"></i>
-                    <h3>Manutenção e Suporte</h3>
-                    <p>Correções de bugs, atualizações e melhorias contínuas.</p>
+                    <div class="card-inner">
+                        <div class="servico-front">
+                            <i class="fas fa-bug"></i>
+                            <h3>Manutenção e Suporte</h3>
+                            <p>Correções de bugs, atualizações e melhorias contínuas.</p>
+                        </div>
+                        <div class="servico-back">
+                            <h4>Tecnologias</h4>
+                            <ul>
+                                <li><i class="fab fa-git-alt"></i> Git</li>
+                                <li><i class="fab fa-gitlab"></i> GitLab</li>
+                                <li><i class="fab fa-docker"></i> Docker</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="projetos" class="projetos-section sr-section">
+        <div class="container">
+            <h2 class="section-title">Projetos</h2>
+            <p class="section-subtitle-legenda">Alguns trabalhos que desenvolvi com dedicação e tecnologia</p>
+
+            <div class="projetos-grid">
+                <!-- Projeto 1 -->
+                <div class="projeto-card">
+                    <img src="../img/projeto1.png" alt="Sistema de Gestão" class="projeto-img" />
+                    <div class="projeto-conteudo">
+                        <h3>Sistema de Gestão Interna</h3>
+                        <p>Sistema administrativo completo com controle de usuários, permissões e relatórios.</p>
+                        <a href="https://github.com/DouglasJr0/seu-projeto" target="_blank" class="btn-projeto">Ver no
+                            GitHub <i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+
+                <!-- Projeto 2 -->
+                <div class="projeto-card">
+                    <img src="../img/projeto2.png" alt="Landing Page" class="projeto-img" />
+                    <div class="projeto-conteudo">
+                        <h3>Landing Page Responsiva</h3>
+                        <p>Desenvolvida em HTML, CSS e JavaScript com foco em responsividade e conversão.</p>
+                        <a href="https://github.com/DouglasJr0/landing-page" target="_blank" class="btn-projeto">Ver no
+                            GitHub <i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+
+                <!-- Projeto 3 -->
+                <div class="projeto-card">
+                    <img src="../img/projeto3.png" alt="Painel de Controle" class="projeto-img" />
+                    <div class="projeto-conteudo">
+                        <h3>Painel Administrativo Laravel</h3>
+                        <p>Aplicação com autenticação JWT, upload de arquivos e integração com PostgreSQL.</p>
+                        <a href="https://github.com/DouglasJr0/painel-laravel" target="_blank" class="btn-projeto">Ver
+                            no GitHub <i class="fab fa-github"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <section id="contato" class="contato-section sr-section">
+        <div class="container">
+            <h2 class="section-title">Entre em Contato</h2>
+            <p class="section-subtitle-legenda">Vamos conversar sobre ideias, projetos ou parcerias!</p>
+
+            <div class="contato-content">
+                <!-- Coluna: Formulário -->
+                <form class="contato-form" action="https://formspree.io/f/SEU_ID_AQUI" method="POST">
+                    <h3>Envie uma Mensagem</h3>
+
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="assunto">Assunto</label>
+                    <input type="text" id="assunto" name="assunto">
+
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+
+                    <button type="submit">
+                        <i class="fas fa-paper-plane"></i> Enviar Mensagem
+                    </button>
+                </form>
+
+                <!-- Coluna: Informações -->
+                <div class="contato-info">
+                    <h3>Informações</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Curitiba, PR</p>
+                    <p><i class="fas fa-envelope"></i> juniormattos0610@gmail.com</p>
+                    <p><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/douglas_junior6/"
+                            target="_blank">@douglas_junior6</a></p>
+                    <p><i class="fab fa-github"></i> <a href="https://github.com/DouglasJr0"
+                            target="_blank">github.com/DouglasJr0</a></p>
+                    <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/douglas-junior-8b083022a/"
+                            target="_blank">Douglas Junior</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <img src="../img/Logo.DouglasJr.png" alt="Logo Douglas Jr">
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Douglas Jr. Todos os direitos reservados.</p>
+        </div>
+    </footer>
 
 
 </body>

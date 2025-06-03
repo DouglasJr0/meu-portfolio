@@ -20,14 +20,4 @@ window.addEventListener('load', () => {
             icon.style.transform = 'translate(0, 0)';
         });
     });
-
-    // ScrollReveal animação
-    ScrollReveal().reveal('.sr-section', {
-        origin: 'bottom',
-        distance: '60px',
-        duration: 1000,
-        easing: 'ease-out',
-        reset: false,
-        interval: 150
-    });
 });
