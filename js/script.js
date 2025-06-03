@@ -1,17 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const serviceCards = document.querySelectorAll('.servico-card');
+    const techCards = document.querySelectorAll('.tech-card');
 
-    serviceCards.forEach(card => {
-        let lastMouseMove = 0;
+    techCards.forEach(card => {
+        let lastMove = 0;
 
         card.addEventListener('mousemove', (e) => {
             const now = Date.now();
-            if (now - lastMouseMove < 5) return;
+            if (now - lastMove < 10) return;
+            lastMove = now;
 
-            lastMouseMove = now;
-            const cardRect = card.getBoundingClientRect();
-            const centerX = cardRect.left + cardRect.width / 2;
-            const centerY = cardRect.top + cardRect.height / 2;
+            const rect = card.getBoundingClientRect();
+            const centerX = rect.left + rect.width / 2;
+            const centerY = rect.top + rect.height / 2;
             const mouseX = e.clientX;
             const mouseY = e.clientY;
 
